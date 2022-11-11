@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { v4 as uuidv4 } from "uuid"
 
 const Form = ({ input, setInput, todos, setTodos, editTodo, setEditTodo }) => {
@@ -19,6 +19,11 @@ const Form = ({ input, setInput, todos, setTodos, editTodo, setEditTodo }) => {
         }
     }, [setInput, editTodo])
 
+    const inputRef = useRef(null);
+
+    useEffect(() => {
+        inputRef.current.focus();
+    });
 
     const onInputChange = (event) => {
         setInput(event.target.value)
@@ -35,7 +40,7 @@ const Form = ({ input, setInput, todos, setTodos, editTodo, setEditTodo }) => {
     }
     return (
         <form onSubmit={onFormSubmit}>
-            <input type="text" placeholder='Enter  a Todo ...' className='task-input' value={input} required onChange={onInputChange} />
+            <input ref={inputRef} type="text" placeholder='Enter  a Todo ...' className='task-input' value={input} required onChange={onInputChange} />
             <button className='button-add' type='submit'>
                 {editTodo ? "OK" : "Add"}
             </button>
