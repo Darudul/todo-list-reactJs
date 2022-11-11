@@ -4,7 +4,8 @@
 }
 
 .container{
-  background: linear-gradient(to right bottom, #e1b382, #c89666) ;
+  /* background: linear-gradient(to right bottom, #e1b382, #c89666) ; */
+  background: linear-gradient(to right bottom, #45f0e8, #22f5ea) ;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -33,7 +34,7 @@
   margin-right: 25px;
   font-size: 20px;
   color: #ccc;
-  background-color: #000;
+  background-color: #191414;
   border: 1px solid #c89666;
   border-radius: 10px;
 }
@@ -64,13 +65,13 @@
   outline: none;
   cursor: pointer;
   background-color: transparent;
-  font-size: 28px;
+  font-size: 25px;
   border-radius: 50%;
 }
 
 .button-complete{
   color: #ff6c6c;
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
 .button-edit {
   color: #e2d029;
@@ -78,6 +79,7 @@
 }
 .button-delete{
   color: lightseagreen;
+  margin-left: 15px;
 }
 
 .complete{
@@ -93,7 +95,7 @@
   color: #ccc;
   font-size: 20px;
   padding-left: 10px;
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 input:focus,
